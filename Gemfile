@@ -7,4 +7,5 @@ group :development do
   gem 'vcr'
   gem 'webmock'
   gem 'byebug'
+  gem 'sinatra'
 end
