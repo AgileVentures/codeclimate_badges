@@ -1,8 +1,10 @@
 class CodeClimateBadges
-  def initialize identfier
+  def initialize identifier
+  	@identifier = identifier
   end
 
   def gpa_badge_url
-    'https://codeclimate.com/github/AgileVentures/WebsiteOne/badges/gpa.svg'
+  	@identifier.gsub!(/\/$/, '')
+    "https://codeclimate.com/#{@identifier}/badges/gpa.svg"
   end
 end
