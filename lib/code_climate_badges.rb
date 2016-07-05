@@ -11,7 +11,7 @@ class CodeClimateBadges
   end
 
   def gpa
-    response = HTTParty.get(gpa_badge_url)
+    response = Net::HTTP.get_response(URI gpa_badge_url)
     stat_regex = /fill-opacity=".3">.*?fill-opacity=".3">([^<]+)/
     if response.body =~ stat_regex
         stat = $1 

@@ -8,8 +8,11 @@ describe CodeClimateBadges do
 	    it { expect(badges.gpa_badge_url).to eq 'https://codeclimate.com/github/AgileVentures/WebsiteOne/badges/gpa.svg' }
 	  end
     describe '#gpa' do
-      use_vcr_cassette
-      it { expect(badges.gpa).to eq '3.5' }
+      it { 
+        VCR.use_cassette 'damn' do
+          expect(badges.gpa).to eq '3.5'
+        end 
+      }
     end
 	end
 	context 'LocalSupport' do
