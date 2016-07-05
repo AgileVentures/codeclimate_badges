@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = 'CodeClimateBadges'
+  s.name        = 'code_climate_badges'
   s.version     = '0.0.0'
   s.date        = '2016-07-05'
   s.summary     = "CodeClimateBadges"
