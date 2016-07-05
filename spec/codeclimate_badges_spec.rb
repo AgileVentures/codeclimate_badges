@@ -1,15 +1,25 @@
 require 'code_climate_badges'
 
 describe CodeClimateBadges do
+
 	context 'WebsiteOne' do
   	subject(:badges) { described_class.new 'github/AgileVentures/WebsiteOne' }
 	  describe '#gpa_badge_url' do 
 	    it { expect(badges.gpa_badge_url).to eq 'https://codeclimate.com/github/AgileVentures/WebsiteOne/badges/gpa.svg' }
 	  end
+    describe '#gpa' do
+      use_vcr_cassette
+      it { expect(badges.gpa).to eq '3.5' }
+    end
 	end
 	context 'LocalSupport' do
 		subject(:badges){described_class.new 'github/AgileVentures/LocalSupport'}
-    it{expect(badges.gpa_badge_url).to eq 'https://codeclimate.com/github/AgileVentures/LocalSupport/badges/gpa.svg'}
+    describe '#gpa_badge_url' do 
+      it { expect(badges.gpa_badge_url).to eq 'https://codeclimate.com/github/AgileVentures/LocalSupport/badges/gpa.svg' }
+    end
+    describe '#gpa' do
+      it { expect(badges.gpa).to eq '3.2' }
+    end
 	end  
 
 	context 'WSO with trailing slash' do
