@@ -9,10 +9,10 @@ Gem::Specification.new do |s|
   s.files       = ["lib/code_climate_badges.rb"]
   s.homepage    =
     'https://github.com/AgileVentures/codeclimate_badges'
-  s.add_dependency('httparty', ["~>"])  
+  s.add_dependency('httparty')  
   s.add_development_dependency('rspec', ["3.4"])
-  s.add_development_dependency('vcr', ["~>"])
-  s.add_development_dependency('webmock', ["~>"])
-  s.add_development_dependency('byebug', ["~>"])
+  s.add_development_dependency('vcr')
+  s.add_development_dependency('webmock')
+  s.add_development_dependency('byebug')
   s.license       = 'MIT'
 end
