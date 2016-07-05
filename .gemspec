@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.files       = ["lib/code_climate_badges.rb"]
   s.homepage    =
     'https://github.com/AgileVentures/codeclimate_badges'
-  gem.add_dependency('httparty', "~>"])  
+  gem.add_dependency('httparty', ["~>"])  
   gem.add_development_dependency('rspec', ["3.4"])
   gem.add_development_dependency('vcr', ["~>"])
   gem.add_development_dependency('webmock', ["~>"])
